@@ -232,33 +232,6 @@ To make your README even better, add a screenshot of your app:
 4. Save it as `screenshot.png` in your project folder
 5. Update the README to show the real screenshot:
 
-Find this line in the README:
-```markdown
-<img src="https://via.placeholder.com/800x400/0038a8/ffffff?text=Philippine+Diabetes+Risk+Predictor" alt="App Banner" width="80%">
-```
-
-Replace with:
-```markdown
-<img src="screenshot.png" alt="App Screenshot" width="80%">
-```
-
-## 🚀 **Push to GitHub**
-
-```bash
-# Add the README
-git add README.md
-
-# If you added a screenshot
-git add screenshot.png
-
-# Commit
-git commit -m "Add professional README with Ampiyas branding"
-
-# Push to GitHub
-git push origin main
-```
-
-## ✅ **Check Your GitHub Page**
 
 Go to: `https://github.com/ampiyas10/ph-diabetes-predictor`
 
