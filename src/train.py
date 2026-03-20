@@ -32,7 +32,7 @@ def calculate_metrics(y_true, y_pred):
         'tp': tp, 'tn': tn, 'fp': fp, 'fn': fn
     }
 
-def train_model(epochs=300, batch_size=32, learning_rate=0.001):
+def train_model(epochs=100, batch_size=32, learning_rate=0.001):
     """
     Train the diabetes prediction model
     """
@@ -82,13 +82,13 @@ def train_model(epochs=300, batch_size=32, learning_rate=0.001):
     print("-" * 50)
     print("✅ Training complete!")
     
-    # Save the model
+    # Save the model AND scaler properly
     model_path = 'saved_models/diabetes_model.pth'
     torch.save({
         'model_state_dict': model.state_dict(),
-        'scaler': scaler,
+        'scaler': scaler,  # This saves the fitted scaler
     }, model_path)
-    print(f"💾 Model saved to: {model_path}")
+    print(f"💾 Model and scaler saved to: {model_path}")
     
     # Final evaluation
     model.eval()
