@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Risk Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .result-card {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            color: white;
+        }
+        .probability {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .risk-level {
+            font-size: 24px;
+        }
+        .details {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .disclaimer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Diabetes Risk Assessment</h1>
+        
+        <div class="result-card" style="background-color: {{ color }};">
+            <div class="probability">{{ "%.1f"|format(probability) }}%</div>
+            <div class="risk-level">{{ risk }}</div>
+        </div>
+        
+        <div class="details">
+            <h3>Your Health Profile:</h3>
+            <table style="width:100%; border-collapse: collapse;">
+                {% for feature, value in features.items() %}
+                <tr>
+                    <td style="padding: 8px; border-bottom: 1px solid #ddd;"><strong>{{ feature }}:</strong></td>
+                    <td style="padding: 8px; border-bottom: 1px solid #ddd;">{{ value }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        
+        <div style="text-align: center;">
+            <p><strong>Recommendation:</strong> {{ advice }}</p>
+            <a href="/" class="button">New Assessment</a>
+        </div>
+        
+        <div class="disclaimer">
+            <strong>⚠️ Medical Disclaimer:</strong> This tool is for educational purposes only. 
+            Always consult with a healthcare provider for medical advice.
+        </div>
+    </div>
+</body>
+</html>

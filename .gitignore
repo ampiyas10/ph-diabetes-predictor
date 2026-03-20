@@ -1,0 +1,49 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+myenv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.egg
+*.egg-info/
+dist/
+build/
+
+# PyTorch
+*.pth
+*.pt
+checkpoints/
+saved_models/
+!saved_models/diabetes_model.pth  # Keep the trained model
+
+# Data
+data/
+*.csv
+*.xlsx
+*.xls
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Environment variables
+.env
+*.env
+
+# Logs
+*.log
+logs/
