@@ -1,18 +1,4 @@
-Absolutely! A professional README makes your project look amazing on GitHub. Let me create a comprehensive README for your Philippine Diabetes Risk Predictor with the Ampiyas branding.
 
-## 📝 **Create Your README.md File**
-
-```bash
-# Navigate to your project folder
-cd C:\ph-diabetes-predictor
-
-# Create the README file
-notepad README.md
-```
-
-Copy and paste this entire content:
-
-```markdown
 # 🇵🇭 Philippine Diabetes Risk Predictor
 ### by Ampiyas Ⓣ
 
